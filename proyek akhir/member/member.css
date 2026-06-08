@@ -1,0 +1,274 @@
+/* ============================================
+   MEMBER CSS – Kedai Kopi Sudut Senja
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',Arial,sans-serif; }
+
+:root {
+    --brown-dark:  #3e2723;
+    --brown-main:  #6f4e37;
+    --gold:        #ffcc70;
+    --bg:          #fff8f0;
+    --white:       #fff;
+    --text:        #333;
+    --text-light:  #777;
+}
+
+/* ---- NAV ---- */
+.member-nav {
+    background: var(--brown-dark);
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    -webkit-align-items: center; align-items: center;
+    -webkit-justify-content: space-between; justify-content: space-between;
+    position: relative;
+    z-index: 100;
+    -webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.2); box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+.nav-brand {
+    color: var(--gold);
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    -webkit-align-items: center; align-items: center;
+    gap: 8px;
+}
+.nav-links { list-style:none; display:flex; gap:8px; }
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    padding: 8px 14px;
+    -webkit-border-radius: 8px; border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-transition: all 0.25s; transition: all 0.25s;
+}
+.nav-links a:hover, .nav-links a.active {
+    background: rgba(255,204,112,0.15);
+    color: var(--gold);
+}
+.nav-user {
+    display: flex;
+    -webkit-align-items: center; align-items: center;
+    gap: 12px;
+    color: rgba(255,255,255,0.85);
+    font-size: 14px;
+}
+.user-avatar {
+    width: 34px; height: 34px;
+    background: var(--brown-main);
+    color: var(--gold);
+    -webkit-border-radius: 50%; border-radius: 50%;
+    display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    border: 2px solid var(--gold);
+}
+.btn-logout {
+    padding: 7px 16px;
+    background: rgba(231,76,60,0.2);
+    color: #ff8a80;
+    -webkit-border-radius: 8px; border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    -webkit-transition: all 0.25s; transition: all 0.25s;
+}
+.btn-logout:hover { background: rgba(231,76,60,0.4); }
+
+/* ---- HERO ---- */
+.member-hero {
+    background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-main) 100%);
+    padding: 60px 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.member-hero::before {
+    content: '☕';
+    position: absolute;
+    font-size: 200px;
+    opacity: 0.05;
+    top: -30px; right: -30px;
+}
+.member-hero-inner { position: relative; z-index: 1; }
+.member-hero h1 { font-size: 40px; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
+.member-hero p  { font-size: 16px; opacity: 0.85; }
+
+/* ---- CONTAINER ---- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+
+/* ---- SECTION TITLE ---- */
+.section-title { text-align: center; margin-bottom: 36px; }
+.section-title h2 { font-size: 36px; font-weight: 700; color: var(--brown-dark); }
+.section-title p  { color: var(--text-light); font-size: 15px; margin-top: 6px; }
+
+/* ---- MENU SECTION ---- */
+.member-menu { background: var(--bg); padding: 60px 0; }
+
+/* ---- Cat Filter ---- */
+.cat-filter {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    -webkit-justify-content: center; justify-content: center;
+    margin-bottom: 36px;
+}
+.cat-btn {
+    padding: 9px 20px;
+    border: 2px solid #e8ddd6;
+    background: var(--white);
+    -webkit-border-radius: 30px; border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--brown-main);
+    cursor: pointer;
+    -webkit-transition: all 0.25s; transition: all 0.25s;
+    font-family: 'Poppins', sans-serif;
+}
+.cat-btn:hover, .cat-btn.active {
+    background: var(--brown-main);
+    border-color: var(--brown-main);
+    color: var(--gold);
+    -webkit-transform: translateY(-2px); transform: translateY(-2px);
+}
+
+/* ---- Menu Grid ---- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+}
+.menu-item {
+    background: var(--white);
+    -webkit-border-radius: 18px; border-radius: 18px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 4px 18px rgba(0,0,0,0.09); box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+    -webkit-transition: transform 0.3s, box-shadow 0.3s; transition: transform 0.3s, box-shadow 0.3s;
+}
+.menu-item:hover {
+    -webkit-transform: translateY(-8px); transform: translateY(-8px);
+    -webkit-box-shadow: 0 16px 40px rgba(111,78,55,0.18); box-shadow: 0 16px 40px rgba(111,78,55,0.18);
+}
+.menu-img-wrap { position: relative; height: 200px; overflow: hidden; }
+.menu-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    -webkit-transition: transform 0.4s; transition: transform 0.4s;
+}
+.menu-item:hover .menu-img-wrap img { -webkit-transform: scale(1.08); transform: scale(1.08); }
+.menu-img-ph {
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+    display: flex;
+    -webkit-align-items: center; align-items: center;
+    -webkit-justify-content: center; justify-content: center;
+    font-size: 60px;
+}
+.menu-badge {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: rgba(62,39,35,0.85);
+    color: var(--gold);
+    padding: 4px 12px;
+    -webkit-border-radius: 20px; border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 600;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.menu-info { padding: 20px; }
+.menu-info h3 { font-size: 17px; font-weight: 700; color: var(--brown-dark); margin-bottom: 8px; }
+.menu-info p  { font-size: 13.5px; color: var(--text-light); line-height: 1.6; margin-bottom: 14px; }
+.menu-footer { display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: space-between; justify-content: space-between; }
+.menu-price  { font-size: 17px; font-weight: 700; color: #d2691e; }
+.stok-info   { display: none !important; font-size: 12px; color: #999; background: #f5f5f5; padding: 3px 10px; -webkit-border-radius: 20px; border-radius: 20px; }
+
+/* ---- INFO SECTION ---- */
+.member-info { background: var(--brown-dark); padding: 50px 30px; }
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+.info-card { text-align: center; color: white; }
+.info-icon { font-size: 36px; display: block; margin-bottom: 12px; }
+.info-card h4 { font-size: 16px; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
+.info-card p  { font-size: 14px; opacity: 0.8; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .member-nav {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 20px;
+        gap: 12px;
+        align-items: center;
+    }
+    .nav-brand {
+        font-size: 16px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+    .nav-links a {
+        padding: 6px 10px;
+        font-size: 12.5px;
+    }
+    .nav-user {
+        margin-top: 4px;
+    }
+    
+    /* Hero section */
+    .member-hero {
+        padding: 40px 20px;
+    }
+    .member-hero h1 {
+        font-size: 28px;
+    }
+    .member-hero p {
+        font-size: 14px;
+    }
+    
+    /* Section title */
+    .section-title {
+        margin-bottom: 24px;
+    }
+    .section-title h2 {
+        font-size: 26px;
+    }
+    .section-title p {
+        font-size: 13px;
+    }
+    
+    /* Menu grid item titles */
+    .menu-info h3 {
+        font-size: 15px;
+    }
+    .menu-info p {
+        font-size: 12px;
+    }
+    .menu-price {
+        font-size: 15px;
+    }
+    
+    /* Table for pesanan (cart history) */
+    .table-pesanan th, .table-pesanan td {
+        padding: 10px;
+        font-size: 12.5px;
+    }
+    .pesanan-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+    .pesanan-container h2 {
+        font-size: 20px;
+    }
+}
