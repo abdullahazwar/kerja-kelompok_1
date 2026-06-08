@@ -1,0 +1,7 @@
+.kedaikopi.sql
+.db.php
+.env*.local
+.env*.prod
+.env*.dev
+*.register.php
+*.login.php
