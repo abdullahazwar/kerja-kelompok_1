@@ -4,14 +4,18 @@
       "runtime": "vercel-php@0.9.0"
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
-      "destination": "/api/index.php"
+      "src": "/(kedai.css)",
+      "dest": "/$1"
     },
     {
-      "source": "/(.*)\\.php",
-      "destination": "/api/index.php"
+      "src": "/(gallery|menu|database)/(.*)",
+      "dest": "/$1/$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php"
     }
   ]
 }
