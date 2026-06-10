@@ -32,7 +32,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             <span class="nav-icon">📦</span> Pesanan / Transaksi
         </a>
         <a href="kelola_penjualan.php" class="<?= $currentPage === 'kelola_penjualan.php' ? 'active' : '' ?>">
-            <span class="nav-icon">📊</span> Data Penjualan (Supabase)
+            <span class="nav-icon">📊</span> Data Penjualan
         </a>
 
         <div class="nav-section-title">Anggota</div>
